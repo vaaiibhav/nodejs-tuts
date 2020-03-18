@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Test</title>
+</head>
+<body>
+    <p> Click on me to make me disappear </p>
+    <p> me too</p>
+    <p> and me also</p>
+    <div class="para1"> This is text </div>
+    <button id="b1">CLick to animate</button>
+</body>
+
+<script>
+$(document).ready(function(){
+    //  paragraph hiding code in jquery
+    $("p").click(function(){
+        $(this).hide();
+    });
+    // para1 aniumate change
+    $("button").click(function(){
+        $("p").animate({left:'400px'});
+    });
+
+});
+
+</script>
+
+</html>
