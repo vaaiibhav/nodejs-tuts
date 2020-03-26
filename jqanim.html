@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Animation</title>
+    <script src="assets/js/jquery.min.js" ></script>
+    <link rel="stylesheet" href="assets/css/jq.css">
+</head>
+
+<body>
+    <button>Animate SQuare</button> 
+<div class="square"> </div>
+  
+
+
+</body>
+<script>
+$(document).ready(function(){
+$("button").click(function(){
+        // $("div").animate({left:'350px'});
+
+
+          $("div").css("background-color", 'Red')
+         
+          .slideUp(1500)
+          .slideDown(3000);
+
+});
+
+
+});
+
+
+</script>
+</html>
