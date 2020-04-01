@@ -1,0 +1,10 @@
+body{
+    height: 100%;
+    width: 100%;
+}
+.slidertop{
+min-height: 540px;
+max-height: 560px;
+max-width: 100%;
+/* background-color: blueviolet; */
+}
