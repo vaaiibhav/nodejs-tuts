@@ -38,10 +38,11 @@
                                 <div class="row register-form">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="First Name *" value="" />
+                                            <input type="text" class="form-control" id="fname" placeholder="First Name *" value="" />
+
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Last Name *" value="" />
+                                            <input type="text" class="form-control" id="lname" placeholder="Last Name *" value="" />
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control" placeholder="Password *" value="" />
@@ -140,17 +141,50 @@
                                     // alert("form submitted");
 
                                     event.preventDefault();
-                                    getKaro();
+                                  postKaro();
                             });
                             function getKaro(){
-                                    var formdata = {
-                                        firstname = $("#fname").val(),
-                                        lastname = $("lname").val()
-                                    }
+                                    // var formdata = {
+                                    //     firstname = $("#fname").val(),
+                                    //     lastname = $("lname").val()
+                                    // }
+
+
+
+
+
                                     
 
 
                             };
+                            function postKaro(){
+                                // var formdata = {
+                                //         firstname = $("#fname").val(),
+                                //         lastname = $("#lname").val()
+                                //     }
+                                    var formdata ={};
+                                    formdata.fname=  $("#fname").val();
+                                    formdata.lname=  $("#lname").val();
+
+                                $.ajax({
+                                            type:'POST',
+                                            data: JSON.stringify(formdata),
+                                            url: "http://localhost:3000/login",
+                                            success: function(responsedata){
+                                                   console.log('success',responsedata); 
+
+                                            }
+
+                                    });
+
+
+
+
+
+
+
+
+                            }
 
 
                         });
