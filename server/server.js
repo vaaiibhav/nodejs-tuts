@@ -25,4 +25,7 @@ app.post('/login',urlencodedParser,(req,res) =>{
 
 })
 
+// nodemon install and find out what it does
+
+
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
