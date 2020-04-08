@@ -141,15 +141,25 @@
                                     // alert("form submitted");
 
                                     event.preventDefault();
-                                  postKaro();
+                                //   postKaro();
+                                getKaro();
                             });
                             function getKaro(){
-                                    // var formdata = {
-                                    //     firstname = $("#fname").val(),
-                                    //     lastname = $("lname").val()
-                                    // }
+                                var formdata ={};
+                                    formdata.fname=  $("#fname").val();
+                                    formdata.lname=  $("#lname").val();
 
 
+                                    $.ajax({
+                                            type:'GET',
+                                            data: (formdata),
+                                            url: "http://localhost:3000/login",
+                                            success: function(responsedata){
+                                                   console.log('success',responsedata); 
+
+                                            }
+
+                                    });
 
 
 

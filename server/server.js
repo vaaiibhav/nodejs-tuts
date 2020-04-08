@@ -24,6 +24,17 @@ app.post('/login',urlencodedParser,(req,res) =>{
 
 
 })
+app.get('/login',urlencodedParser,(req,res) =>{
+        console.log(req.query);
+       
+        var indata = (req.query);
+        // var indata= JSON.stringify(req.query);
+        
+        var firstname = indata.fname;
+        console.log("Fname :", firstname);
+        res.send("Get Request received by server on Login");
+});
+
 
 // nodemon install and find out what it does
 
